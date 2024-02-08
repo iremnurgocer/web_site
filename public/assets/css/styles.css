@@ -50,4 +50,43 @@ footer {
 .post-button:hover {
     background-color: #0056b3;
 }
+a{
+    text-decoration: none; !important;
+    color: black;
+    transition: color 0.3s;
+}
+a:hover{
+    color: #343a40;
+    text-decoration: none !important;
+}
+.link {
+    text-decoration: none !important; /* Altýný çizmeyi kaldýr */
+    color: #ffffff; /* Link rengi */
+    transition: color 0.3s; /* Geçiþ efekti */
+}
 
+/* Linkin üzerine gelindiðinde rengini soluklaþtýr */
+.link:hover {
+    color: #cccccc; /* Soluklaþtýrýlmýþ link rengi */
+}
+
+.blogs-link{
+    text-decoration: none !important;
+    color: #343a40;
+    transition: color 0.3s;
+}
+.blogs-link:hover{
+    color: black;
+}
+.blogs-div:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Gölge rengi ve boyutu */
+}
+
+/* Div elementinin stilini belirle */
+.blogs-div {
+    border-radius: 10px; /* Kenar yarýçapý, yuvarlak þekil oluþturur */
+    transition: box-shadow 0.3s; /* Gölge deðiþim süresi */
+}
+body {
+    font-family: 'Courier New', monospace,Georgia, serif;
+}

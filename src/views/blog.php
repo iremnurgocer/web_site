@@ -11,37 +11,24 @@
 <body>
 <header class="bg-dark text-light">
     <div class="container">
-        <h1><a href="/" class="link"><?php echo "Ä°REM NUR GÃ–Ã‡ER"; ?></a></h1>
-        <nav>
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link link" href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+        <h1><a href="/" class="link"><?php echo EncodingHelper::utftoiso("ÝREM NUR GÖÇER"); ?></a></h1>
+<nav>
+    <ul class="nav">
+        <li class="nav-item"><a class="nav-link link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link link" href="/contact">Contact</a></li>
+    </ul>
+</nav>
+</div>
 </header>
-
-<section class="jumbotron text-center">
-    <div class="container">
-        <h2>Software Developer</h2>
-        <p>Welcome to my personal website.</p>
-    </div>
-</section>
-
 <main class="container">
     <section class="row">
-        <?php foreach($blogs as $blogsid => $blogsValue) { ?>
-        <div class="col-md-6 blogs-div">
-            <a href="blog?id=<?= $blogsid ?>" class="blogs-link">
-                <h2 class="text-center"><?=EncodingHelper::isotoutf(EncodingHelper::utftoiso($blogsValue["title"]))?></h2>
-                <p class="text-center"><?=EncodingHelper::isotoutf(EncodingHelper::utftoiso($blogsValue["abstract"]))?></p>
-            </a>
-        </div>
-        <?php } ?>
+            <div class="col-md-6">
+                    <h2><?=EncodingHelper::isotoutf(EncodingHelper::utftoiso($blog["title"]))?></h2>
+                    <p><?=EncodingHelper::isotoutf(EncodingHelper::utftoiso($blog["abstract"]))?></p>
+                    <div><p><?=EncodingHelper::isotoutf(EncodingHelper::utftoiso($blog["contents"]))?></p></div>
+            </div>
     </section>
 </main>
-
-
 
 <footer class="bg-dark text-light text-center py-4 mt-4">
     <div class="container">
